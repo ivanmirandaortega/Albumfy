@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import "./LoginPage.css";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import userService from "../../utils/userService";
+import React from "react";
+import { Grid } from "semantic-ui-react"
+import LandingDivider from "../../components/LandingDivider/LandingDivider";
+import LoginForm from "../../components/LoginForm/LoginForm";
 
 export default function LoginPage(props) {
   return (
-    <>
-      <h1>Setup Login Page</h1>
-      <ul>
-        <li>Read the Login Model, You can change it to fit your needs</li>
-        <li>
-          Make sure you read the Login func in the User Controller, to know how
-          it is setup to find the user!
-        </li>
-      </ul>
-    </>
+    <Grid style={{ height: '100vh', padding: 0, margin: 0 }} verticalAlign='middle'>
+      <Grid.Row style={{ padding: 0, margin: 0 }}>
+        <LandingDivider />
+        <LoginForm handleSignUpOrLogin={props.handleSignUpOrLogin} />
+      </Grid.Row>
+    </Grid>
   );
 }
