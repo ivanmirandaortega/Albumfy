@@ -1,20 +1,15 @@
-import React, { useState } from "react";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-
-import userService from "../../utils/userService";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Grid } from "semantic-ui-react";
+import SignUpSide from "../../components/LandingDivider/LandingDivider";
+import SignUpForm from '../../components/SignUpForm/SignUpForm'
 
 export default function SignUpPage(props) {
   return (
-    <>
-      <h1>Signup PAGE</h1>
-      <ul>
-        <li>Read the User Model, You can change it to fit your needs</li>
-        <li>
-          Make sure you read the Signup up func in the User Controller, to know
-          how it is setup to find the user!
-        </li>
-      </ul>
-    </>
+    <Grid textAlign="center" style={{ height: '100vh', padding: 0, margin: 0 }} verticalAlign='middle'>
+      <Grid.Row style={{ padding: 0, margin: 0 }}>
+        <SignUpSide />
+        <SignUpForm handleSignUpOrLogin={props.handleSignUpOrLogin} />
+      </Grid.Row>
+    </Grid>
   );
 }
