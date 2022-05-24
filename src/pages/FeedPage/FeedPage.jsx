@@ -7,7 +7,7 @@ import PostGallery from '../../components/PostGallery/PostGallery'
 
 import * as postsAPI from '../../utils/postApi'
 
-export default function FeedPage({ user }) {
+export default function FeedPage({ user, handleLogout }) {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState("")
@@ -25,21 +25,21 @@ export default function FeedPage({ user }) {
         }
     }
 
-    // async function getPosts() {
-    //     try {
-    //         const data = await postsAPI.getAll();
-    //         console.log(data, " this is data,");
-    //         setPosts([...data.posts]);
-    //         setLoading(false);
-    //     } catch (err) {
-    //         console.log(err.message, " this is the error");
-    //         setError(err.message);
-    //     }
-    // }
+    async function getPosts() {
+        try {
+            const data = await postsAPI.getAll();
+            console.log(data, " this is data,");
+            setPosts([...data.posts]);
+            setLoading(false);
+        } catch (err) {
+            console.log(err.message, " this is the error");
+            setError(err.message);
+        }
+    }
 
-    // useEffect(() => {
-    //     getPosts()
-    // }, [])
+    useEffect(() => {
+        getPosts()
+    }, [])
 
     return (
         <Grid centered>
