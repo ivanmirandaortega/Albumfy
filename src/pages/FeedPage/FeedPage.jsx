@@ -54,7 +54,7 @@ export default function FeedPage({ user, handleLogout }) {
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
-                <Grid.Column>
+                <Grid.Column style={{ maxWidth: 850 }}>
                     <PostGallery
                         posts={posts}
                         numPhotosCol={3}
