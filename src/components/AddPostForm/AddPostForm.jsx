@@ -23,19 +23,26 @@ export default function AddPostForm(props) {
         const formData = new FormData()
         formData.append('photo', selectedFile)
         formData.append('caption', state.caption)
-
+        props.handleAddPost(formData)
     }
 
     return (
         <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
                 <Segment>
-                    <Form>
+                    <Form autoComplete="off" onSubmit={handleSubmit}>
                         <Form.Input
                             placeholder="Share your favorite music album"
+                            name="caption"
+                            value={state.caption}
+                            onChange={handleChange}
+                            required
                         />
                         <Form.Input
                             type='file'
+                            className='form-control'
+                            name='photo'
+                            onChange={handleFileInput}
                         />
                         <Button type='submit' className='btn'>Add Post</Button>
                     </Form>
