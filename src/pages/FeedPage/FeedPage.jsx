@@ -4,7 +4,7 @@ import PageHeader from '../../components/Header/Header'
 import AddPostForm from '../../components/AddPostForm/AddPostForm';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import PostGallery from '../../components/PostGallery/PostGallery'
-
+import Loading from '../../components/Loader/Loader'
 import * as postsAPI from '../../utils/postApi'
 
 export default function FeedPage({ user, handleLogout }) {
@@ -40,6 +40,25 @@ export default function FeedPage({ user, handleLogout }) {
     useEffect(() => {
         getPosts()
     }, [])
+
+    if (error) {
+        return (
+            <>
+                <PageHeader user={user} />
+                <ErrorMessage error={error} />
+            </>
+        )
+    }
+
+    if (loading) {
+        return (
+            <>
+                <PageHeader user={user} />
+                <Loading />
+            </>
+        )
+    }
+
 
     return (
         <Grid centered>
