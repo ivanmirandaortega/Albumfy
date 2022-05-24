@@ -2,13 +2,13 @@ import React from "react"
 import { Card, Icon, Image } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 
-export default function PostCard({ post }) {
+export default function PostCard({ post, user }) {
 
     return (
-        <Card>
-            <Image />
+        <Card key={post._id}>
+            <Image src={`${post.photoUrl}`} wrapped ui={false} />
             <Card.Content>
-                <div>card</div>
+                <Card.Description>{post.caption}</Card.Description>
             </Card.Content>
             <Card.Content textAlign={"right"}>
                 <Icon

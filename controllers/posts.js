@@ -29,7 +29,7 @@ function create(req, res) {
 
 async function index(req, res) {
     try {
-        const post = await Post.find({}).populate('user').exec()
+        const posts = await Post.find({}).populate('user').exec()
         res.status(200).json({ posts })
     } catch (err) {
         res.status(400).json({ err })
