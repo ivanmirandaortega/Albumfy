@@ -3,6 +3,7 @@ import { Grid } from "semantic-ui-react";
 import PageHeader from '../../components/Header/Header'
 import AddPostForm from '../../components/AddPostForm/AddPostForm';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import PostGallery from '../../components/PostGallery/PostGallery'
 
 import * as postsAPI from '../../utils/postApi'
 
@@ -50,6 +51,11 @@ export default function FeedPage({ user }) {
             <Grid.Row>
                 <Grid.Column style={{ maxWidth: 450 }}>
                     <AddPostForm handleAddPost={handleAddPost} />
+                </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+                <Grid.Column>
+                    <PostGallery />
                 </Grid.Column>
             </Grid.Row>
         </Grid>
