@@ -46,11 +46,23 @@ function login(creds) {
     .then(({ token }) => tokenService.setToken(token));
 }
 
+function getProfile(username) {
+  return fetch(BASE_URL + username, {
+    headers: {
+      'Authorization': "Bearer " + tokenService.getToken(),
+    }
+  }).then(res => {
+    if (res.ok) return res.json();
+    throw new Error('Bad Credentials! CHECK THE SERVER TERMINAL!')
+  })
+}
+
 const userService = {
   signup,
   logout,
   login,
   getUser,
+  getProfile
 };
 
 export default userService;
