@@ -10,7 +10,7 @@ export default function PageHeader({ user }) {
                 <Link to='/'>App Name</Link>
             </Header>
             <Header floated="right">
-                <Link to=''>
+                <Link to={`/${user?.username}`}>
                     <Image src={user?.photoUrl ? user?.photoUrl : 'https://react.semantic-ui.com/images/wireframe/square-image.png'}
                         avatar
                     ></Image>
