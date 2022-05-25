@@ -40,7 +40,20 @@ export default function FeedPage({ user, handleLogout }) {
 
     async function addLike(postId) {
         try {
+            const data = await likesAPI.create(postId)
+            console.log(data, '< the response from the server when we make a like')
+            getPosts()
+        } catch (err) {
+            console.log(err)
+            setError(err.message)
+        }
+    }
 
+    async function removeLike(likeId) {
+        try {
+            const data = await likesAPI.removeLike(likeId)
+            console.log(data, '< this is the response from the server when we remove a like')
+            getPosts()
         } catch (err) {
             console.log(err)
             setError(err.message)
@@ -88,6 +101,10 @@ export default function FeedPage({ user, handleLogout }) {
                         posts={posts}
                         numPhotosCol={3}
                         user={user}
+                        isProfile={false}
+                        loading={loading}
+                        addLike={addLike}
+                        removeLike={removeLike}
                     />
                 </Grid.Column>
             </Grid.Row>
