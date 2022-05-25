@@ -44,9 +44,9 @@ export default function SignUpForm(props) {
     }
 
     return (
-        <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle' padded="horizontally">
             <Grid.Row style={{ padding: 0, margin: 0 }}>
-                <Grid.Column style={{ maxWidth: 450 }}>
+                <Grid.Column style={{ maxWidth: 450 }} verticalAlign="middle">
                     <Header as='h1' textAlign='center'>Sign Up</Header>
                     <Form autoComplete='off' onSubmit={handleSubmit}>
                         <Segment>

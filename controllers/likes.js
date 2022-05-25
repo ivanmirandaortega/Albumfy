@@ -9,6 +9,7 @@ async function create(req, res) {
     try {
         const post = await Post.findById(req.params.id)
         post.likes.push({ username: req.user.username, userId: req.user._id })
+        console.log(post, ' < post in create')
         await post.save()
         res.status(201).json({ data: 'like added' })
     } catch (err) {
