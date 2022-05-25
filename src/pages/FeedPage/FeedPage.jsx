@@ -6,6 +6,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import PostGallery from '../../components/PostGallery/PostGallery'
 import Loading from '../../components/Loader/Loader'
 import * as postsAPI from '../../utils/postApi'
+import * as likesAPI from '../../utils/likeApi'
 
 export default function FeedPage({ user, handleLogout }) {
     const [posts, setPosts] = useState([])
@@ -34,6 +35,15 @@ export default function FeedPage({ user, handleLogout }) {
         } catch (err) {
             console.log(err.message, " this is the error");
             setError(err.message);
+        }
+    }
+
+    async function addLike(postId) {
+        try {
+
+        } catch (err) {
+            console.log(err)
+            setError(err.message)
         }
     }
 
