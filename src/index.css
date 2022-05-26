@@ -24,3 +24,7 @@ a {
 a:hover {
   color: black;
 }
+
+.form-link {
+  color: blue;
+}
