@@ -41,12 +41,13 @@ export default function SignUpForm(props) {
     function handleFileInput(e) {
         console.log(e.target.files);
         setSelectedFile(e.target.files[0]);
+
     }
 
     return (
         <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle' padded="horizontally">
             <Grid.Row style={{ padding: 0, margin: 0 }}>
-                <Grid.Column style={{ maxWidth: 950, paddingLeft: '15rem' }} verticalAlign="middle">
+                <Grid.Column style={{ maxWidth: 950, paddingLeft: '20rem' }} verticalAlign="middle">
                     <Header as='h1' textAlign='center'>Sign Up</Header>
                     <Form autoComplete='off' onSubmit={handleSubmit}>
                         <Segment>
