@@ -60,6 +60,7 @@ export default function LoginForm(props) {
                                 type="submit"
                                 className="btn"
                                 size="large"
+                                color="pink"
                             >Login</Button>
                         </Segment>
                     </Form>

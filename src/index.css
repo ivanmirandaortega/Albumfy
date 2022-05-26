@@ -32,3 +32,18 @@ a:hover {
 .form-link:hover {
   color: #4183c4;
 }
+
+.ui.fluid.button {
+  background: linear-gradient(90deg, rgba(255, 35, 152, 1) 0%, rgba(246, 66, 68, 1) 100%);
+  color: white;
+}
+
+.ui.button {
+  background: linear-gradient(90deg, rgba(255, 35, 152, 1) 0%, rgba(246, 66, 68, 1) 100%);
+  color: white;
+}
+
+.ui.button:hover {
+  background: linear-gradient(90deg, rgba(255, 35, 152, 1) 0%, rgba(246, 66, 68, 1) 100%);
+  color: white;
+}

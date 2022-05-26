@@ -88,7 +88,7 @@ export default function SignUpForm(props) {
                                     onChange={handleFileInput}
                                 />
                             </Form.Field>
-                            <Button className="btn" size="large" fluid>Signup</Button>
+                            <Button className="btn" size="large" fluid >Signup</Button>
                         </Segment>
                         <Message>
                             Already have an account? <Link to="/login" className="form-link">Login</Link>

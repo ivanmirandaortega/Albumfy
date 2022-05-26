@@ -44,7 +44,7 @@ export default function AddPostForm(props) {
                             name='photo'
                             onChange={handleFileInput}
                         />
-                        <Button type='submit' className='btn'>Add Post</Button>
+                        <Button type='submit' className='btn post' >Add Post</Button>
                     </Form>
                 </Segment>
             </Grid.Column>
