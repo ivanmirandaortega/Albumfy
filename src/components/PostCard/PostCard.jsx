@@ -12,6 +12,8 @@ export default function PostCard({ post, user, isProfile, removeLike, addLike })
 
     const likeColor = likeIndex > -1 ? "red" : "grey"
 
+    const likeText = likeIndex > -1 ? "Remove from favorites" : "Add to favorites"
+
     return (
         <Card key={post._id}>
             <Image src={`${post.photoUrl}`} wrapped ui={false} />
@@ -23,7 +25,7 @@ export default function PostCard({ post, user, isProfile, removeLike, addLike })
                     name={"heart"}
                     color={likeColor}
                     onClick={clickHandler}
-                /> Add to favorites
+                /> {likeText}
             </Card.Content>
         </Card>
     )
