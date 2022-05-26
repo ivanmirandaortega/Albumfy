@@ -1,37 +1,27 @@
-## Setup 
+# album 
 
-1. Clone the repo
-2. Rename the folder to your Project, you can use the `mv` command like `mv mern-boilerplate yourprojectname`
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+A full-stack web application to share your favorite music albums.
+
+This app allows a user to create a profile and upload their favorite music albums. Authorized users can add albums to their favorites and will be rendered on their profiles. 
+
+## Screenshots 
 
 
-#### Setup your git repo
+## Technologies Used: 
+- CSS 
+- MongoDB
+- Express 
+- React 
+- Node.js
+- Heroku
 
-1. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-2. Then you can run the following commands in the root of your project 
+## Getting Started: 
+[album]
 
-```
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@git.generalassemb.ly:SEI-CC/test.git // this will be whatever your address will be, look at the address in the code github gives you!
-git push -u origin main
-```
+[Trello] (https://trello.com/b/2IPnx6tA/project-4)
 
-#### Setup the App
-
-```npm install```
-
-*DOTENV*
-
-`touch .env`
-
-add your variables
-
-```
-DATABASE_URL=mongodb://localhost:27017/testagramV2
-BUCKET_NAME=catcollectorone
-SECRET=mysecretforjwt
-```
-
-The app is configured, to use those respective key names for the database, jwt secret and aws bucket, of course you'll have your own values
+## Next Steps: 
+- As a user, I want to create a comment 
+- As a user, I want to update a comment 
+- As a user, I want to delete a comment 
+- As a user, I want to delete a post 
