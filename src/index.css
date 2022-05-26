@@ -16,3 +16,11 @@ code {
   top: 47px;
   left: -80px;
 }
+
+a {
+  color: black
+}
+
+a:hover {
+  color: black;
+}
