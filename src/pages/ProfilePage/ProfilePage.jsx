@@ -59,7 +59,7 @@ export default function ProfilePage(props) {
     if (error) {
         return (
             <>
-                <PageHeader user={props.user} />
+                <PageHeader user={props.user} handleLogout={props.handleLogout} />
                 <ErrorMessage error={error} />
             </>
         )
@@ -68,7 +68,7 @@ export default function ProfilePage(props) {
     if (loading) {
         return (
             <>
-                <PageHeader user={props.user} />
+                <PageHeader user={props.user} handleLogout={props.handleLogout} />
                 <Loading />
             </>
         )
@@ -78,7 +78,7 @@ export default function ProfilePage(props) {
         <Grid>
             <Grid.Row>
                 <Grid.Column>
-                    <PageHeader user={props.user} />
+                    <PageHeader user={props.user} handleLogout={props.handleLogout} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row centered>

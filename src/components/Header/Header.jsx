@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Header, Segment, Image, Dropdown } from "semantic-ui-react";
 
-export default function PageHeader({ user }) {
+export default function PageHeader({ user, handleLogout }) {
     console.log(user, '< user in header')
     return (
         <Segment clearing>
@@ -18,10 +18,8 @@ export default function PageHeader({ user }) {
                 <Dropdown item>
                     <Dropdown.Menu>
                         <Dropdown.Item><Link to='/'>Feed</Link></Dropdown.Item>
-                        <Dropdown.Item><Link to={`/${user?.username}`}>
-                            My favorites
-                        </Link></Dropdown.Item>
-                        <Dropdown.Item>Logout</Dropdown.Item>
+                        <Dropdown.Item><Link to={`/${user?.username}`}>My favorites</Link></Dropdown.Item>
+                        <Dropdown.Item><Link to='' onClick={handleLogout}>Logout</Link></Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </Header>

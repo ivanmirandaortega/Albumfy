@@ -67,7 +67,7 @@ export default function FeedPage({ user, handleLogout }) {
     if (error) {
         return (
             <>
-                <PageHeader user={user} />
+                <PageHeader user={user} handleLogout={handleLogout} />
                 <ErrorMessage error={error} />
             </>
         )
@@ -76,7 +76,7 @@ export default function FeedPage({ user, handleLogout }) {
     if (loading) {
         return (
             <>
-                <PageHeader user={user} />
+                <PageHeader user={user} handleLogout={handleLogout} />
                 <Loading />
             </>
         )
@@ -87,7 +87,7 @@ export default function FeedPage({ user, handleLogout }) {
         <Grid centered>
             <Grid.Row>
                 <Grid.Column>
-                    <PageHeader user={user} />
+                    <PageHeader user={user} handleLogout={handleLogout} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
