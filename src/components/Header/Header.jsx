@@ -7,7 +7,7 @@ export default function PageHeader({ user, handleLogout }) {
     return (
         <Segment clearing>
             <Header floated="left">
-                <Link to='/'>App Name</Link>
+                <Link to='/'>Albumfy</Link>
             </Header>
             <Header floated="right">
                 <Link to=''>
