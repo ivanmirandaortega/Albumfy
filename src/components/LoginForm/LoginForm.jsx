@@ -33,7 +33,7 @@ export default function LoginForm(props) {
     }
 
     return (
-        <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle' padded="horizontally">
             <Grid.Row style={{ padding: 0, margin: 0 }}>
                 <Grid.Column style={{ maxWidth: 450 }}>
                     <Header as="h1" textAlign="center">Login</Header>

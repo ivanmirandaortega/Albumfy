@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
+import { Button, Form, Grid, Header, Segment, Message } from "semantic-ui-react";
 import userService from "../../utils/userService";
 
 export default function SignUpForm(props) {
@@ -89,6 +89,9 @@ export default function SignUpForm(props) {
                             </Form.Field>
                             <Button className="btn" size="large" fluid>Signup</Button>
                         </Segment>
+                        <Message>
+                            Already have an account? <Link to="/login">Login</Link>
+                        </Message>
                         {error ? <ErrorMessage error={error} /> : null}
                     </Form>
                 </Grid.Column>
