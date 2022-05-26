@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Header, Segment, Image, Icon } from "semantic-ui-react";
+import { Header, Segment, Image, Dropdown } from "semantic-ui-react";
 
 export default function PageHeader({ user }) {
     console.log(user, '< user in header')
@@ -10,11 +10,20 @@ export default function PageHeader({ user }) {
                 <Link to='/'>App Name</Link>
             </Header>
             <Header floated="right">
-                <Link to={`/${user?.username}`}>
+                <Link to=''>
                     <Image src={user?.photoUrl ? user?.photoUrl : 'https://react.semantic-ui.com/images/wireframe/square-image.png'}
                         avatar
                     ></Image>
                 </Link>
+                <Dropdown item>
+                    <Dropdown.Menu>
+                        <Dropdown.Item><Link to='/'>Feed</Link></Dropdown.Item>
+                        <Dropdown.Item><Link to={`/${user?.username}`}>
+                            My favorites
+                        </Link></Dropdown.Item>
+                        <Dropdown.Item>Logout</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             </Header>
         </Segment>
     )
