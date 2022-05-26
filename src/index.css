@@ -26,5 +26,9 @@ a:hover {
 }
 
 .form-link {
-  color: blue;
+  color: #4183c4;
+}
+
+.form-link:hover {
+  color: #4183c4;
 }
