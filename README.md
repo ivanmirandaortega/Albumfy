@@ -1,4 +1,4 @@
-# album 
+# Albumfy 
 
 A full-stack web application to share your favorite music albums.
 
