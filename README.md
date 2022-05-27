@@ -9,11 +9,14 @@ This app allows a user to create a profile and upload their favorite music album
 ![feed-page](public/feed.png)
 
 ## Technologies Used: 
-- CSS 
+- HTML5
+- CSS
+- JavaScript 
 - MongoDB
 - Express 
 - React 
 - Node.js
+- Semantic UI Framework
 - Heroku
 
 ## Getting Started: 
