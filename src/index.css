@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(25, 25, 25);
 }
 
 code {
@@ -22,7 +23,7 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: #fff;
 }
 
 .form-link {
@@ -46,4 +47,26 @@ a:hover {
 .ui.button:hover {
   background: linear-gradient(90deg, rgba(255, 35, 152, 1) 0%, rgba(246, 66, 68, 1) 100%);
   color: white;
+}
+
+.ui.dropdown>.dropdown.icon:before {
+  color: #fff;
+}
+
+.ui.dropdown .menu {
+  background-color: rgb(25, 25, 25);
+}
+
+.drop-link {
+  color: #fff;
+}
+
+.avatar {
+  border-style: solid;
+  border-color: #D72398;
+  border-width: 2px;
+}
+
+.ui.segment.post-form {
+  background-color: rgb(25, 25, 25);
 }

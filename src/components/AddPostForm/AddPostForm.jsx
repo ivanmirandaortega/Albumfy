@@ -29,7 +29,7 @@ export default function AddPostForm(props) {
     return (
         <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
-                <Segment>
+                <Segment className='post-form'>
                     <Form autoComplete="off" onSubmit={handleSubmit}>
                         <Form.Input
                             placeholder="Share your favorite music album"
@@ -37,6 +37,7 @@ export default function AddPostForm(props) {
                             value={state.caption}
                             onChange={handleChange}
                             required
+                            className='post-input'
                         />
                         <Form.Input
                             type='file'

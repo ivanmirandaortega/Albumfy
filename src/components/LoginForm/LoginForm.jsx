@@ -36,9 +36,9 @@ export default function LoginForm(props) {
         <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle' padded="horizontally">
             <Grid.Row style={{ padding: 0, margin: 0 }}>
                 <Grid.Column style={{ maxWidth: 950, paddingLeft: '20rem' }}>
-                    <Header as="h1" textAlign="center">Login</Header>
+                    <Header as="h1" textAlign="center" style={{ color: '#fff' }}>Login</Header>
                     <Form autoComplete="off" onSubmit={handleSubmit}>
-                        <Segment>
+                        <Segment style={{ background: '#1A1A1A' }}>
                             <Form.Input
                                 placeholder="email"
                                 name="email"
@@ -64,7 +64,7 @@ export default function LoginForm(props) {
                             >Login</Button>
                         </Segment>
                     </Form>
-                    <Message>
+                    <Message style={{ background: '#1A1A1A', color: '#fff' }}>
                         Don't have an account? <Link to="/signup" className="form-link">Sign Up</Link>
                     </Message>
                     {error ? <ErrorMessage error={error} /> : null}

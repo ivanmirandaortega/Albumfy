@@ -1,4 +1,5 @@
 import React from "react";
+import './LoginPage.css'
 import { Grid } from "semantic-ui-react"
 import LandingDivider from "../../components/LandingDivider/LandingDivider";
 import LoginForm from "../../components/LoginForm/LoginForm";

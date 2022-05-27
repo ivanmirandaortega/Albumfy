@@ -48,9 +48,9 @@ export default function SignUpForm(props) {
         <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign='middle' padded="horizontally">
             <Grid.Row style={{ padding: 0, margin: 0 }}>
                 <Grid.Column style={{ maxWidth: 950, paddingLeft: '20rem' }} verticalAlign="middle">
-                    <Header as='h1' textAlign='center'>Sign Up</Header>
+                    <Header as='h1' textAlign='center' style={{ color: '#fff' }}>Sign Up</Header>
                     <Form autoComplete='off' onSubmit={handleSubmit}>
-                        <Segment>
+                        <Segment style={{ background: '#1A1A1A' }}>
                             <Form.Input
                                 placeholder='username'
                                 name='username'
@@ -90,7 +90,7 @@ export default function SignUpForm(props) {
                             </Form.Field>
                             <Button className="btn" size="large" fluid >Signup</Button>
                         </Segment>
-                        <Message>
+                        <Message style={{ background: '#1A1A1A', color: '#fff' }}>
                             Already have an account? <Link to="/login" className="form-link">Login</Link>
                         </Message>
                         {error ? <ErrorMessage error={error} /> : null}
