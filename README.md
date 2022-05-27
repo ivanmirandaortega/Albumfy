@@ -17,7 +17,7 @@ This app allows a user to create a profile and upload their favorite music album
 - Heroku
 
 ## Getting Started: 
-album
+[Albumfy](https://albumfy.herokuapp.com/)
 
 [Trello](https://trello.com/b/2IPnx6tA/project-4)
 
