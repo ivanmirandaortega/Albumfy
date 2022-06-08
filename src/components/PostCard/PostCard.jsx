@@ -15,12 +15,12 @@ export default function PostCard({ post, user, isProfile, removeLike, addLike })
     const likeText = likeIndex > -1 ? "Remove from favorites" : "Add to favorites"
 
     return (
-        <Card key={post._id}>
+        <Card key={post._id} style={{ background: '#1A1A1A', color: '#fff' }}>
             <Image src={`${post.photoUrl}`} wrapped ui={false} />
             <Card.Content>
-                <Card.Description>{post.caption}</Card.Description>
+                <Card.Description style={{ color: '#fff' }}>{post.caption}</Card.Description>
             </Card.Content>
-            <Card.Content textAlign={"right"}>
+            <Card.Content textAlign={"right"} className='card-content'>
                 <Icon
                     name={"heart"}
                     color={likeColor}

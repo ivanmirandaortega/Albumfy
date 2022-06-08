@@ -37,7 +37,7 @@ export default function AddPostForm(props) {
                             value={state.caption}
                             onChange={handleChange}
                             required
-                            className='post-input'
+                            style={{ background: 'red' }}
                         />
                         <Form.Input
                             type='file'
